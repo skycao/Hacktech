@@ -34,7 +34,7 @@
 					height: 300,
 					fill: 'white',
 					stroke: 'black',
-					strokeWidth: 4,
+					strokeWidth: 3,
 					draggable: false
 				});
 				layer.add(keys_array[i]);
@@ -44,20 +44,19 @@
 			layer.add(keys_array[1]);
 			stage.add(layer);
 			*/
-			for(var i=11; i< 20; i++) {
+			for(var i=11; i< 21; i++) {
 				keys_array[i] = new Kinetic.Rect({
-					x: 52+70*(i-11),
+					x: 53+70*(i-11),
 					y: 10,
 					offset: [50, 25],
 					width: 54,
 					height: 200,
-					fill: 'white',
-
-					stroke: 'black',
-					strokeWidth:2,
+					fill: 'black',
 					draggable: false
 				});
-				layer.add(keys_array[i]);
+				if(i!=13&&i!=17&&i!=18) {
+					layer.add(keys_array[i]);
+				}
 			}
 			stage.add(layer);
 		</script>
