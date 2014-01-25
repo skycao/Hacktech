@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      div {
+        margin-top: 10%;
+		margin-left: 10%;
+        padding: 0px;
+		
+      }
+    </style>
+  </head>
+  <body>
+	<div id="container"></div>
+		<canvas id="myCanvas" width="2000px" height="400px" margin="auto"></canvas>
+		<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.1.min.js"></script>
+		<script defer="defer">
+		  var canvas = document.getElementById('myCanvas');
+		  var context = canvas.getContext('2d');
+		  var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 800,
+			height: 500
+		  });
+			var layer = new Kinetic.Layer();
+			var keys_array = new Array(20);
+			for(var i=0; i< 11; i++) {
+				keys_array[i] = new Kinetic.Rect({
+					x: 10+70*i,
+					y: 10,
+					offset: [50, 25],
+					width: 70,
+					height: 300,
+					fill: 'white',
+					stroke: 'black',
+					strokeWidth: 4,
+					draggable: false
+				});
+				layer.add(keys_array[i]);
+			}
+			/*
+			keys_array[1].setAttr('fill', 'grey');
+			layer.add(keys_array[1]);
+			stage.add(layer);
+			*/
+			for(var i=11; i< 20; i++) {
+				keys_array[i] = new Kinetic.Rect({
+					x: 52+70*(i-11),
+					y: 10,
+					offset: [50, 25],
+					width: 54,
+					height: 200,
+					fill: 'white',
+
+					stroke: 'black',
+					strokeWidth:2,
+					draggable: false
+				});
+				layer.add(keys_array[i]);
+			}
+			stage.add(layer);
+		</script>
+	<div>
+  </body>
+</html>
