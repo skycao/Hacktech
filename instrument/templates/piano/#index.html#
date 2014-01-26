@@ -41,6 +41,7 @@
 					height: 300,
 					fill: 'white',
 					stroke: 'black',
+
 					strokeWidth: 3,
 					draggable: false
 				});

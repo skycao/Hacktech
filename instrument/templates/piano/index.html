@@ -12,16 +12,17 @@
 			margin-left: auto;
 			margin-right: auto;
 			display: block;
-			width: 800px;
-		}
+			width: 800px;}
 	</style>
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="{% static 'script.js' %}"></script>
+	<script src="{% static 'jquery.js' %}"></script>
+	<!--<script src="{% static 'script.js' %}"></script>-->
+	<script src="{% static 'audio.js' %}"></script>
+	
   </head>
   <body>
 	<div id="container">
 		<canvas id="myCanvas" width="2000px" height="400px" margin="auto"></canvas>
-		<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.1.min.js"></script>
+		<script src="{% static 'kinetic-v5.0.1.min.js' %}"></script>
 		<script defer="defer">
 		  var canvas = document.getElementById('myCanvas');
 		  var context = canvas.getContext('2d');
@@ -31,8 +32,8 @@
 			height: 501
 		  });
 			var layer = new Kinetic.Layer();
-			var keys_array = new Array(20);
-			for(var i=0; i< 11; i++) {
+			var keys_array = new Array(22);
+			for(var i=0; i< 12; i++) {
 				keys_array[i] = new Kinetic.Rect({
 					x: 400+70*i,
 					y: 50,
@@ -49,23 +50,30 @@
 			
 			//stage.add(layer);
 			
-			for(var i=11; i< 21; i++) {
+			for(var i=12; i< 21; i++) {
 				keys_array[i] = new Kinetic.Rect({
 					x: 443+70*(i-11),
 					y: 50,
 					offset: [50, 25],
+
 					width: 54,
 					height: 200,
 					fill: 'black',
 					draggable: false,
 					index: 1
 				});
-				if(i!=13&&i!=17&&i!=18) {
+				if(i!=14 && i!=18) {
 					layer.add(keys_array[i]);
 				}
 			}
 			stage.add(layer);
 		</script>
 		</div>
+
+	<input type="range" name="volume" id="volume" min="0" max="8" value="5" />
+	<button id="Start">Start</button>
+	<button id="Stop">Stop</button>
+        <button id="add">Add</button>
+        <button id="minus">Minus</button>
   </body>
 </html>

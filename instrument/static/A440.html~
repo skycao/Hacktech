@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script language="javascript" type="text/javascript" src="jquery-2.1.0.min.js"></script>
+<script src="jquery-ui.js"></script>
+<script language="javascript" type="text/javascript" src="audio.js"></script>
+</head>
+<body>
+	<!--<button id="clicker" onclick='End(audio)'>End</button>
+	<button onclick='Play(audio)'>Play</button>-->
+	<input type="range" name="volume" id="volume" min="0" max="8" value="5" />
+	<button id="Start">Start</button>
+	<button id="Stop">Stop</button>
+        <button id="add">Add</button>
+        <button id="minus">Minus</button>
+</body>
+</html>
+
