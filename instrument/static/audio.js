@@ -231,6 +231,14 @@ function finishedLoading(bufferList) {
 		arrayval = 20;
 		key = 'p';
 		break;
+	    case '1':
+                arrayval = 200;
+                key = '1';
+                break;
+            case '2':
+                arrayval = 201;
+                key = '2';
+                break;
 	    }
 
 	    if(arrayval < 12 && white_to_black_map[arrayval] != []) {
@@ -393,7 +401,20 @@ function finishedLoading(bufferList) {
     }); */
     
     function Start(key) {
-        if (currentplayed[key] != null) {
+        if (key == "1") {
+            console.log("octave down");
+            if (current_octave >= 0) {
+                current_octave -= 1;
+            }
+        }
+        else if (key == '2') {
+            console.log("octave up");
+            if (current_octave <= 7) {
+                current_octave += 2;
+            }
+        }
+ 
+        else if (currentplayed[key] != null) {
              Stop(key)
         }
         var filename = "../media/Piano." + dynamics() + "." + note_dictionary[key] + (current_octave + higher(key)).toString() + ".mp3";
