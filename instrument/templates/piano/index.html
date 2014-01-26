@@ -3,16 +3,18 @@
 <html>
   <head>
     <style>
-      div {
-        margin-top: 10%;
-		margin-left: 10%;
-        padding: 0px;
-		
-      }
-    </style>
+		canvas {
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			width: 800px;
+		}
+	</style>
   </head>
   <body>
-	<div id="container"></div>
+	<div id="container">
 		<canvas id="myCanvas" width="2000px" height="400px" margin="auto"></canvas>
 		<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.1.min.js"></script>
 		<script defer="defer">
@@ -20,15 +22,15 @@
 		  var context = canvas.getContext('2d');
 		  var stage = new Kinetic.Stage({
 			container: 'container',
-			width: 800,
-			height: 500
+			width: 1580,
+			height: 501
 		  });
 			var layer = new Kinetic.Layer();
 			var keys_array = new Array(20);
 			for(var i=0; i< 11; i++) {
 				keys_array[i] = new Kinetic.Rect({
-					x: 10+70*i,
-					y: 10,
+					x: 400+70*i,
+					y: 50,
 					offset: [50, 25],
 					width: 70,
 					height: 300,
@@ -39,15 +41,13 @@
 				});
 				layer.add(keys_array[i]);
 			}
-			/*
-			keys_array[1].setAttr('fill', 'grey');
-			layer.add(keys_array[1]);
-			stage.add(layer);
-			*/
+			
+			//stage.add(layer);
+			
 			for(var i=11; i< 21; i++) {
 				keys_array[i] = new Kinetic.Rect({
-					x: 53+70*(i-11),
-					y: 10,
+					x: 453+70*(i-11),
+					y: 50,
 					offset: [50, 25],
 					width: 54,
 					height: 200,
@@ -60,6 +60,6 @@
 			}
 			stage.add(layer);
 		</script>
-	<div>
+		</div>
   </body>
 </html>
