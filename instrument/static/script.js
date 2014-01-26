@@ -4,7 +4,7 @@
 
 $.getScript("static/audio.js");
 
-white_to_black_map = {0: [], 1: [12], 2: [12, 13], 3: [13], 4: [15], 5: [15, 16], 6: [16, 17], 7: [17], 8: [19], 9: [19, 20], 10: [20], 11: []}
+white_to_black_map = {0: [12], 1: [12,13], 2: [13], 3: [15], 4: [15,16], 5: [16, 17], 6: [17], 7: [19], 8: [19,20], 9: [20], 10: [], 11: []}
 
 function to_front(index, color) {
     keys_array[index].setAttr('fill', color);
