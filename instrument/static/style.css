@@ -1,6 +1,133 @@
-div {
-	background-color: #000000;
-	height: 20px;
-	width: 20px;
-	border-color: black;
+/*RESET CODE BELOW */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*REAL CODE BEGIN HERE*/
+
+
+body, html{
+	height:100%;
+}
+
+#sound{
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #000000;
+}
+
+#piano{
+	z-index:0;
+	position: fixed;
+	top:20%;
+	left:10%;
+	width:80%;
+	height:60%;
+
+}
+
+#pianoWhite{
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#pianoBlack{
+	position: absolute;
+	/*top:20%;
+	left:10%;*/
+	width:99.5%;
+	height:60%;
+	z-index: 1;
+}
+
+.black{
+	display:block;
+	position:absolute;
+	width: 5%;
+	height: 100%;
+	background-color: black;
+}
+
+#pianoWhite td {
+	border: 3px solid black;
+}
+
+#b1{
+	left:7%;
+}
+#b2{
+	left:16%;
+}
+#b3{
+	left:25%;
+}
+#b4{
+	left:34%;
+}
+#b5{
+	left:43%;
+}
+#b6{
+	left:52%;
+}
+#b7{
+	left:61%;
+}
+#b8{
+	left:70%;
+}
+#b9{
+	left:79%;
+}
+#b10{
+	left:88%;
+}
+#b11{
+	width:3.3%;
+	left:97%;
+}
+

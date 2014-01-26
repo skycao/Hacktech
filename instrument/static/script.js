@@ -3,6 +3,11 @@ var changeKey = function(obj){
 };
 
 $(document).ready(function(){
+	
+}
+
+
+$(document).ready(function(){
 	$(document).keypress(function (event){
 		//var arrayval = 0;
 		if(event.which == 97){
@@ -15,7 +20,7 @@ $(document).ready(function(){
 	
 });
 
-/*switch (String.fromCharCode(event.which)){
+switch (String.fromCharCode(event.which)){
 	case 'a':
 		arrayval = 0;
 		break;
