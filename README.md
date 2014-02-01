@@ -1,4 +1,4 @@
 Hacktech
 ========
 
-Our hack for Hacktech. Played around with some multitrack audio playback stuff.
+Our hack for Hacktech. Made a piano web application.
