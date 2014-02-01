@@ -2,7 +2,24 @@
 		obj.style.background-color = '#ff3333'
 };*/
 
+<<<<<<< HEAD
 $.getScript("static/audio.js");
+=======
+$(document).ready(function(){
+	
+}
+
+
+$(document).ready(function(){
+	$(document).keypress(function (event){
+		//var arrayval = 0;
+		if(event.which == 97){
+			$('div').css('background-color','#ff3333')
+			var object = $('div')
+			changeKey(object);
+		};
+	});
+>>>>>>> 9f38c4a89e3d45b34bf8e0fce50141a18a437d76
 
 white_to_black_map = {0: [12], 1: [12,13], 2: [13], 3: [15], 4: [15,16], 5: [16, 17], 6: [17], 7: [19], 8: [19,20], 9: [20], 10: [], 11: []}
 
@@ -11,6 +28,7 @@ function to_front(index, color) {
     layer.add(keys_array[index]);
 }
 
+<<<<<<< HEAD
 $(document).ready(function() {
     $(document).keypress(function(event) {
 	var arrayval;
@@ -24,6 +42,9 @@ $(document).ready(function() {
 	  stage.add(layer);*/
 
 	switch (String.fromCharCode(event.which)){
+=======
+switch (String.fromCharCode(event.which)){
+>>>>>>> 9f38c4a89e3d45b34bf8e0fce50141a18a437d76
 	case 'a':
 	    arrayval = 0;
 	    key = 'a';
