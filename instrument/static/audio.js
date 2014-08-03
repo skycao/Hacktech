@@ -482,7 +482,7 @@ function Stop(key) {
 }
 
 */
-=======
+//=======
 //Range => volume of button
 $(document).ready(function(){
 $('#volume').change( function() {
@@ -559,9 +559,9 @@ var id = "Piano." + dynamic + note + current_octave.toString() + '.mp3';
 
 
 
-$(document).ready(function(){
+/*$(document).ready(function(){
 	$(document).keypress(function(event){
 		
 	})
-})
->>>>>>> 9f38c4a89e3d45b34bf8e0fce50141a18a437d76
+})*/
+//>>>>>>> 9f38c4a89e3d45b34bf8e0fce50141a18a437d76
